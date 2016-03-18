@@ -69,6 +69,33 @@
               
 <p>This is preliminary documentation for the Google Cloud APIs
 repository.</p>
+<h2 id="google-storage-v1">Google.Storage.V1</h2>
+<p>A wrapper library over
+<a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
+for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a></p>
+<p>Common operations are exposed via the
+<a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
+<h2 id="google-pubsub-v1">Google.Pubsub.V1</h2>
+<p>A library for working with <a href="https://cloud.google.com/pubsub/">Google Cloud Pub/sub</a>.</p>
+<p>The API operates at three abstractions:</p>
+<ul>
+<li><code>SimplePubsub</code> (coming soon) is a simplified API making common
+scenarios extremely straightforward.</li>
+<li><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
+<a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
+provide a general-purpose abstraction over raw the RPC API, providing
+features such as page streaming to make client code cleaner and
+simpler.</li>
+<li><a href="api/Google.Pubsub.V1.Publisher.IPublisherClient.html"><code>IPublisherClient</code></a>
+and <a href="api/Google.Pubsub.V1.Subscriber.ISubscriberClient.html"><code>ISubscriberClient</code></a>
+expose the raw RPC API. Most clients will never need to use this
+abstraction, but it provides the most flexibility for via specific
+scenarios.</li>
+</ul>
+<p>Each abstraction is built over the lower-level one, and client code
+can mix and match abstractions very easily: you may be able to use
+<code>SimplePubsub</code> for most of your code, dropping down to
+<code>PublisherClient</code> and <code>SubscriberClient</code> occasionally, for example.</p>
 
             </article>
           </div>
