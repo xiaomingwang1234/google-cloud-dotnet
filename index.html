@@ -106,14 +106,14 @@ var transaction = client.BeginTransaction(projectId).Transaction;
 var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
 var insertedKey = commitResponse.MutationResults[0].Key;
 </code></pre>
-<p>See <code>DatastoreClient</code>](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml)
+<p>See <a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>
 for details. Note that custom conversions are provided to make
 working with the <a href="api/Google.Datastore.V1Beta3.Value.html"><code>Value</code></a> type much
 simpler than it would otherwise be.</p>
 <h2 id="google-logging-v2">Google.Logging.V2</h2>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
-<p>See <code>LoggingServiceV2Client</code>](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
+<p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
 for details.</p>
 
             </article>
