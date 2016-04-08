@@ -57,7 +57,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/jskeet/gcloud-dotnet/blob/new-docfx/docs/index.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/jskeet/gcloud-dotnet/blob/docs/docs/index.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="introduction">Introduction</h1>
               
 <p>This is preliminary documentation for the Google Cloud APIs
@@ -69,7 +69,7 @@ for working with <a href="https://cloud.google.com/storage/">Google Cloud Storag
 <p>Common operations are exposed via the
 <a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
 <h2 id="google-pubsub-v1">Google.Pubsub.V1</h2>
-<p>A library for working with <a href="https://cloud.google.com/pubsub/">Google Cloud Pub/sub</a>.</p>
+<p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/sub</a>.</p>
 <p>The API operates at three abstractions:</p>
 <ul>
 <li><code>SimplePubsub</code> (coming soon) is a simplified API making common
@@ -89,6 +89,32 @@ scenarios.</li>
 can mix and match abstractions very easily: you may be able to use
 <code>SimplePubsub</code> for most of your code, dropping down to
 <code>PublisherClient</code> and <code>SubscriberClient</code> occasionally, for example.</p>
+<h2 id="google-datastore-v1beta3">Google.Datastore.V1Beta3</h2>
+<p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
+<p>Sample code:</p>
+<pre><code class="lang-csharp">var client = DatastoreClient.Create();
+
+var projectId = ...;
+var partitionId = new PartitionId { ProjectId = projectId };
+var entity = new Entity
+{
+    Key = new Key { PartitionId = partitionId, Path = { new PathElement { Kind = &quot;message&quot; } } },
+    [&quot;created&quot;] = DateTime.UtcNow,
+    [&quot;text&quot;] = &quot;Text of the message&quot;
+};
+var transaction = client.BeginTransaction(projectId).Transaction;
+var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
+var insertedKey = commitResponse.MutationResults[0].Key;
+</code></pre>
+<p>See <code>DatastoreClient</code>](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml)
+for details. Note that custom conversions are provided to make
+working with the <a href="api/Google.Datastore.V1Beta3.Value.html"><code>Value</code></a> type much
+simpler than it would otherwise be.</p>
+<h2 id="google-logging-v2">Google.Logging.V2</h2>
+<p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
+<p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
+<p>See <code>LoggingServiceV2Client</code>](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
+for details.</p>
 
             </article>
           </div>
