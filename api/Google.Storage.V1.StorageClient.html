@@ -69,9 +69,12 @@
               
               <h1 id="Google_Storage_V1_StorageClient" data-uid="Google.Storage.V1.StorageClient">Class StorageClient
               </h1>
-              <div class="markdown level0 summary"><p>Wrapper around <span class="xref">Google.Apis.Storage.v1.StorageService</span> to provide simpler operations.</p>
+              <div class="markdown level0 summary"><p>Abstract class providing operations for Google Cloud Storage.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 conceptual"><blockquote><h1 id="note-beta-release">Note: beta release</h1>
+<p>This is a beta release of the Cloud Storage API.</p>
+</blockquote>
+</div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
@@ -81,63 +84,20 @@
               <h6><strong>Assembly</strong>:Google.Storage.V1.dll</h6>
               <h5 id="Google_Storage_V1_StorageClient_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class StorageClient</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract class StorageClient</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <h4 id="Google_Storage_V1_StorageClient__ctor_Google_Apis_Services_BaseClientService_Initializer_" data-uid="Google.Storage.V1.StorageClient.#ctor(Google.Apis.Services.BaseClientService.Initializer)">StorageClient(BaseClientService.Initializer)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new client by creating a <span class="xref">Google.Apis.Storage.v1.StorageService</span> which uses the
-given <span class="xref">Google.Apis.Services.BaseClientService.Initializer</span> for request initialization.</p>
+              <h5 id="Google_Storage_V1_StorageClient_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><para>
+This abstract class is provided to enable testability while permitting
+additional operations to be added in the future. See <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(GoogleCredential)</a>
+and <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(GoogleCredential)</a> to construct instances; alternatively, you can
+construct a <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a> directly from a <span class="xref">Google.Apis.Storage.v1.StorageService</span>.
+</para>
+<para>
+All instance methods declared in this class are virtual, with an implementation which simply
+throws <span class="xref">System.NotImplementedException</span>. All these methods are overridden in <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a>.
+</para>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageClient(BaseClientService.Initializer initializer)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Services.BaseClientService.Initializer</span></td>
-                    <td><em>initializer</em></td>
-                    <td><p>The initializer to use in the service. Must not be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_StorageClient__ctor_Google_Apis_Storage_v1_StorageService_" data-uid="Google.Storage.V1.StorageClient.#ctor(Google.Apis.Storage.v1.StorageService)">StorageClient(StorageService)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <span class="xref">Google.Apis.Storage.v1.StorageService</span>.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageClient(StorageService service)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.StorageService</span></td>
-                    <td><em>service</em></td>
-                    <td><p>The service to wrap. Must not be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Storage_V1_StorageClient_Service" data-uid="Google.Storage.V1.StorageClient.Service">Service</h4>
@@ -152,7 +112,7 @@ application naming etc).</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageService Service
+                <pre><code class="lang-csharp hljs">public virtual StorageService Service
 {
     get;
 }</code></pre>
@@ -174,6 +134,98 @@ application naming etc).</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <h4 id="Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Storage.V1.StorageClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential)">Create(GoogleCredential)</h4>
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>, using application default credentials if
+no credentials are specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static StorageClient Create(GoogleCredential credential = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
+                    <td><em>credential</em></td>
+                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Storage.V1.StorageClient.CreateAsync(Google.Apis.Auth.OAuth2.GoogleCredential)">CreateAsync(GoogleCredential)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>, using application default credentials if
+no credentials are specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;StorageClient&gt; CreateAsync(GoogleCredential credential = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
+                    <td><em>credential</em></td>
+                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>&gt;</td>
+                    <td><p>The task representing the created <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions)">DeleteObject(Object, DeleteObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
 </div>
@@ -200,7 +252,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DeleteObject(Object obj, DeleteObjectOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DeleteObject(Object obj, DeleteObjectOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -251,7 +303,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +362,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +435,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -448,7 +500,7 @@ To download a specific generation, use <a class="xref" href="Google.Storage.V1.D
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DownloadObject(Object source, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DownloadObject(Object source, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -493,7 +545,7 @@ defaults will be used.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DownloadObject(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DownloadObject(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -548,7 +600,7 @@ To download a specific generation, use <a class="xref" href="Google.Storage.V1.D
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DownloadObjectAsync(Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -615,7 +667,7 @@ defaults will be used.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -682,52 +734,6 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_FromApplicationCredentials_System_String_" data-uid="Google.Storage.V1.StorageClient.FromApplicationCredentials(System.String)">FromApplicationCredentials(String)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a new <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a> from the default application credentials.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Storage_V1_StorageClient_FromApplicationCredentials_System_String__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The application credentials are available to developers by running <c>gcloud auth</c> from the
-command line, and are available automatically on Google Cloud Platform hosts.</p>
-</div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Task&lt;StorageClient&gt; FromApplicationCredentials(string applicationName)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>applicationName</em></td>
-                    <td><p>The name of the application to create a client for. Must not be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>&gt;</td>
-                    <td><p>A client configured with the application-default credentials.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Google_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions_" data-uid="Google.Storage.V1.StorageClient.GetObject(System.String,System.String,Google.Storage.V1.GetObjectOptions)">GetObject(String, String, GetObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about an object synchronously.</p>
 </div>
@@ -738,7 +744,7 @@ to download the content.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Object GetObject(string bucket, string objectName, GetObjectOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Object GetObject(string bucket, string objectName, GetObjectOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -797,7 +803,7 @@ to download the content.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -863,7 +869,7 @@ This does not support reporting progress, or streaming the results.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;Bucket&gt;&gt; ListAllBucketsAsync(string projectId, ListBucketsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Bucket&gt;&gt; ListAllBucketsAsync(string projectId, ListBucketsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -922,7 +928,7 @@ This does not support reporting progress, or streaming the results.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;Object&gt;&gt; ListAllObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Object&gt;&gt; ListAllObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -989,7 +995,7 @@ simply call LINQ&#39;s <c>ToList()</c> method on the returned sequence.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1043,7 +1049,7 @@ simply call LINQ&#39;s <c>ToList()</c> method on the returned sequence.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;Object&gt; ListObjects(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Object&gt; ListObjects(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1099,7 +1105,7 @@ defaults will be supplied.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Object UploadObject(Object destination, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Object UploadObject(Object destination, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1161,7 +1167,7 @@ defaults will be used.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Object UploadObject(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Object UploadObject(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1235,7 +1241,7 @@ defaults will be used.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Object&gt; UploadObjectAsync(Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1304,7 +1310,7 @@ defaults will be used.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1366,7 +1372,7 @@ such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not 
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">

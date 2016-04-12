@@ -61,12 +61,26 @@
               
 <p>This is preliminary documentation for the Google Cloud APIs
 repository.</p>
+<h1 id="beta-apis">Beta APIs</h1>
+<p>These APIs are available from <a href="https://nuget.org">nuget.org</a> and can
+be installed by most users without reconfiguring their build
+environment at all. There is no guarantee that the API surface will
+stay stable between beta and full release, but we have high confidence
+that the libraries work and are usable.</p>
 <h2 id="google-storage-v1">Google.Storage.V1</h2>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
 for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a></p>
 <p>Common operations are exposed via the
 <a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
+<h1 id="alpha-apis">Alpha APIs</h1>
+<p>These APIs are available from Google&#39;s <a href="http://https://www.myget.org/gallery/google-dotnet-public">public myget
+feed</a>,
+which you will need to configure within your build system.</p>
+<p>These APIs are even more likely to have significant surface
+changes over time, and may fail or have usability issues. Still, if
+you would like to experiment with them, we would welcome your
+feedback.</p>
 <h2 id="google-pubsub-v1">Google.Pubsub.V1</h2>
 <p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/sub</a>.</p>
 <p>The API operates at three abstractions:</p>
