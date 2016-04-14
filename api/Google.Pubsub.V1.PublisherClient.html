@@ -71,8 +71,7 @@
               </h1>
               <div class="markdown level0 summary"><p>Publisher client wrapper, for convenient use.</p>
 </div>
-              <div class="markdown level0 conceptual"><blockquote><h1 id="note-alpha-release">Note: alpha release</h1>
-<p>This is alpha release of the Cloud Pub/sub API.</p>
+              <div class="markdown level0 conceptual"><blockquote><p><strong>Note: alpha release</strong><br>This is alpha release of the Cloud Pub/sub API.</p>
 </blockquote>
 </div>
               <div class="inheritance">
@@ -345,7 +344,14 @@
               <h4 id="Google_Pubsub_V1_PublisherClient_CreateTopic_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.CreateTopic(System.String,Google.Api.Gax.CallSettings)">CreateTopic(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Alternative: use a known topic resource name
+// projects/{PROJECT_ID}/topics/{TOPIC_ID}
+string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+Topic topic = client.CreateTopic(topicName);
+Console.WriteLine($&quot;Created {topic.Name}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Topic CreateTopic(string name, CallSettings callSettings = null)</code></pre>
@@ -398,7 +404,14 @@ must not start with <code>&quot;goog&quot;</code>.</p>
               <h4 id="Google_Pubsub_V1_PublisherClient_CreateTopicAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.CreateTopicAsync(System.String,Google.Api.Gax.CallSettings)">CreateTopicAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Alternative: use a known topic resource name
+// projects/{PROJECT_ID}/topics/{TOPIC_ID}
+string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+Topic topic = await client.CreateTopicAsync(topicName);
+Console.WriteLine($&quot;Created {topic.Name}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Topic&gt; CreateTopicAsync(string name, CallSettings callSettings = null)</code></pre>
@@ -451,7 +464,14 @@ must not start with <code>&quot;goog&quot;</code>.</p>
               <h4 id="Google_Pubsub_V1_PublisherClient_CreateTopicAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.PublisherClient.CreateTopicAsync(System.String,System.Threading.CancellationToken)">CreateTopicAsync(String, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Alternative: use a known topic resource name
+// projects/{PROJECT_ID}/topics/{TOPIC_ID}
+string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+Topic topic = await client.CreateTopicAsync(topicName);
+Console.WriteLine($&quot;Created {topic.Name}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Topic&gt; CreateTopicAsync(string name, CancellationToken cancellationToken)</code></pre>
@@ -878,7 +898,16 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
               <h4 id="Google_Pubsub_V1_PublisherClient_ListTopics_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopics(System.String,Google.Api.Gax.CallSettings)">ListTopics(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Alternative: use a known project resource name:
+// projects/{PROJECT_ID}
+string projectName = PublisherClient.GetProjectName(&quot;PROJECT_ID&quot;);
+foreach (Topic topic in client.ListTopics(projectName))
+{
+    Console.WriteLine(topic.Name);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Topic&gt; ListTopics(string project, CallSettings callSettings = null)</code></pre>
@@ -926,7 +955,17 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
               <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicsAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicsAsync(System.String,Google.Api.Gax.CallSettings)">ListTopicsAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Alternative: use a known project resource name:
+// projects/{PROJECT_ID}
+string projectName = PublisherClient.GetProjectName(&quot;{PROJECT_ID}&quot;);
+IAsyncEnumerable&lt;Topic&gt; topics = client.ListTopicsAsync(projectName);
+await topics.ForEachAsync(topic =&gt;
+{
+    Console.WriteLine(topic.Name);
+});
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IAsyncEnumerable&lt;Topic&gt; ListTopicsAsync(string project, CallSettings callSettings = null)</code></pre>
