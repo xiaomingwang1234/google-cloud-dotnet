@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListMonitoredResourceDescriptorsResponse
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -77,12 +77,27 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ListMonitoredResourceDescriptorsResponse</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Logging.V2</h6>
               <h6><strong>Assembly</strong>:Google.Logging.V2.dll</h6>
               <h5 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_syntax">Syntax</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">[DebuggerNonUserCode]
-public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListMonitoredResourceDescriptorsResponse&gt;, IMessage, IEquatable&lt;ListMonitoredResourceDescriptorsResponse&gt;, IDeepCloneable&lt;ListMonitoredResourceDescriptorsResponse&gt;</code></pre>
+public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListMonitoredResourceDescriptorsResponse&gt;, IMessage, IEquatable&lt;ListMonitoredResourceDescriptorsResponse&gt;, IDeepCloneable&lt;ListMonitoredResourceDescriptorsResponse&gt;, IPageResponse&lt;MonitoredResourceDescriptor&gt;, IEnumerable&lt;MonitoredResourceDescriptor&gt;, IEnumerable</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -172,10 +187,7 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -187,32 +199,7 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -225,11 +212,7 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string NextPageToken
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string NextPageToken { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -246,15 +229,14 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.IPageResponse&lt;Google.Api.MonitoredResourceDescriptor&gt;.NextPageToken</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_Parser" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser">Parser</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;ListMonitoredResourceDescriptorsResponse&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;ListMonitoredResourceDescriptorsResponse&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -266,7 +248,7 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.MessageParser%601.html#Google_Protobuf_MessageParser_1">MessageParser</a>&lt;<a class="xref" href="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.html#Google_Logging_V2_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.html#Google_Logging_V2_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -277,10 +259,7 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;MonitoredResourceDescriptor&gt; ResourceDescriptors
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;MonitoredResourceDescriptor&gt; ResourceDescriptors { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +271,7 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField%601.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<span class="xref">Google.Api.MonitoredResourceDescriptor</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -321,6 +300,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_Clone" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -343,6 +324,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Logging.V2.ListMonitoredResourceDescriptorsResponse&gt;.Clone()</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_Equals_Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Equals(Google.Logging.V2.ListMonitoredResourceDescriptorsResponse)">Equals(ListMonitoredResourceDescriptorsResponse)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -382,6 +365,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Logging.V2.ListMonitoredResourceDescriptorsResponse&gt;.Equals(Google.Logging.V2.ListMonitoredResourceDescriptorsResponse)</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_Equals_System_Object_" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -421,6 +406,32 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_GetEnumerator" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;MonitoredResourceDescriptor&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">Google.Api.MonitoredResourceDescriptor</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Google.Api.MonitoredResourceDescriptor&gt;.GetEnumerator()</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_GetHashCode" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -443,6 +454,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_MergeFrom_Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.MergeFrom(Google.Logging.V2.ListMonitoredResourceDescriptorsResponse)">MergeFrom(ListMonitoredResourceDescriptorsResponse)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -467,6 +480,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Logging.V2.ListMonitoredResourceDescriptorsResponse&gt;.MergeFrom(Google.Logging.V2.ListMonitoredResourceDescriptorsResponse)</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -485,12 +500,14 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_ToString" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -513,6 +530,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -531,12 +550,64 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
+              <h4 id="Google_Logging_V2_ListMonitoredResourceDescriptorsResponse_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
             </article>
           </div>
           
@@ -555,7 +626,8 @@ public sealed class ListMonitoredResourceDescriptorsResponse : IMessage&lt;ListM
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+             
+            
           </div>
         </div>
       </footer>

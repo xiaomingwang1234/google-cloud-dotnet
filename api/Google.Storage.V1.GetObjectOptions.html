@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetObjectOptions
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -77,6 +77,30 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">GetObjectOptions</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Storage.V1</h6>
               <h6><strong>Assembly</strong>:Google.Storage.V1.dll</h6>
               <h5 id="Google_Storage_V1_GetObjectOptions_syntax">Syntax</h5>
@@ -92,11 +116,103 @@ set, the latest generation will be retrieved.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public long ? Generation
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public long ? Generation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_GetObjectOptions_IfGenerationMatch" data-uid="Google.Storage.V1.GetObjectOptions.IfGenerationMatch">IfGenerationMatch</h4>
+              <div class="markdown level1 summary"><p>Precondition for retrieval: the object is only fetched if the object&#39;s current
+generation matches the given value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ? IfGenerationMatch { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_GetObjectOptions_IfGenerationNotMatch" data-uid="Google.Storage.V1.GetObjectOptions.IfGenerationNotMatch">IfGenerationNotMatch</h4>
+              <div class="markdown level1 summary"><p>Precondition for retrieval: the object is only fetched if the object&#39;s current
+generation does not match the given value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ? IfGenerationNotMatch { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_GetObjectOptions_IfMetagenerationMatch" data-uid="Google.Storage.V1.GetObjectOptions.IfMetagenerationMatch">IfMetagenerationMatch</h4>
+              <div class="markdown level1 summary"><p>Precondition for retrieval: the object is only fetched if the object&#39;s current
+meta-generation matches the given value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ? IfMetagenerationMatch { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_GetObjectOptions_IfMetagenerationNotMatch" data-uid="Google.Storage.V1.GetObjectOptions.IfMetagenerationNotMatch">IfMetagenerationNotMatch</h4>
+              <div class="markdown level1 summary"><p>Precondition for retrieval: the object is only fetched if the object&#39;s current
+meta-generation does not match the given value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ? IfMetagenerationNotMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -119,11 +235,7 @@ set, the latest generation will be retrieved.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ObjectsResource.GetRequest.ProjectionEnum? Projection
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Projection? Projection { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -135,7 +247,7 @@ set, the latest generation will be retrieved.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.GetRequest.ProjectionEnum.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_ProjectionEnum">ObjectsResource.GetRequest.ProjectionEnum</a>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Storage.V1.Projection.html#Google_Storage_V1_Projection">Projection</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -158,7 +270,8 @@ set, the latest generation will be retrieved.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+             
+            
           </div>
         </div>
       </footer>
