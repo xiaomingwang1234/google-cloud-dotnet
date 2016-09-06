@@ -8,7 +8,7 @@
     <title>Call settings | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Call settings | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.3.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -62,9 +62,9 @@
 <h2 id="introduction">Introduction</h2>
 <p>All client libraries wrapping gRPC-based APIs (see the <a href="api-layers.html">API layers</a> article)
 allow customization of RPC calls by using
-<a href="../obj/api/Google.Api.Gax.CallSettings.yml">CallSettings</a>. If <code>CallSettings</code> are
+<a href="api/Google.Api.Gax.CallSettings.html">CallSettings</a>. If <code>CallSettings</code> are
 not specified sensible defaults are automatically provided.
-See the <a href="../obj/api/Google.Api.Gax.CallSettings.yml">CallSettings documentation</a>
+See the <a href="api/Google.Api.Gax.CallSettings.html">CallSettings documentation</a>
 for descriptions of the available properties.</p>
 <p>The underlying gRPC API uses
 <a href="http://www.grpc.io/grpc/csharp/html/T_Grpc_Core_CallOptions.htm">CallOptions</a>,
@@ -85,9 +85,9 @@ property is used.</p>
 <p>The client-wide <code>CallSettings</code> is higher-priority than per-RPC-method <code>CallSettings</code>
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-<a href="../obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Headers">headers</a>;
+<a href="api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Headers">headers</a>;
 or a common
-<a href="../obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Timing">deadline</a>
+<a href="api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Timing">deadline</a>
 for multiple RPC invocations.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="per-rpc-highest-priority">Per-RPC (highest priority)</h3>
@@ -182,9 +182,11 @@ retry policy for every method. See, for example,
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

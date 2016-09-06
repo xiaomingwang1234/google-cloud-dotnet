@@ -8,7 +8,7 @@
     <title>Frequently Asked Questions | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Frequently Asked Questions | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.3.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -69,7 +69,7 @@ discovered at execution time depends on the toolchain used to build
 the application, and gRPC 0.15 does not load these libraries correctly
 under <code>dotnet cli</code>.</p>
 <p>We hope to have a fix for this in time for the next beta release.</p>
-<h2 id="how-can-i-use-the-local-emulator-for-datastore-or-pub-sub">How can I use the local emulator for Datastore or Pub/Sub?</h2>
+<h2 id="how-can-i-use-the-local-emulator-for-datastore-or-pubsub">How can I use the local emulator for Datastore or Pub/Sub?</h2>
 <p>Currently the libraries have no knowledge of the local emulators.
 However, when creating a client, you can configure the endpoint that the library
 connects to. If you set that endpoint to the port of an emulator, your
@@ -84,7 +84,7 @@ sufficient for most customers, but please
 <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">let us know</a>
 if you have specific environments where you need support for lower versions,
 and we can see what options are available.</p>
-<h2 id="why-do-credentials-specified-with-google-application-credentials-fail">Why do credentials specified with GOOGLE_APPLICATION_CREDENTIALS fail?</h2>
+<h2 id="why-do-credentials-specified-with-googleapplicationcredentials-fail">Why do credentials specified with GOOGLE_APPLICATION_CREDENTIALS fail?</h2>
 <p>By default, if you don&#39;t have the <code>GOOGLE_APPLICATION_CREDENTIALS</code>
 environment variable set, the credentials will be obtained from the
 <code>gcloud</code> tool, and will work with no problems. When credentials are
@@ -105,9 +105,11 @@ should be fixed.</p>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

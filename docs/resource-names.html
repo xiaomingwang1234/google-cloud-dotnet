@@ -8,7 +8,7 @@
     <title>Resource names | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Resource names | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.3.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -121,8 +121,8 @@ string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // The value of topicName is now &quot;projects/petstore/topics/offers&quot;
 </code></pre><h2 id="parsing-resource-ids-from-a-resource-name">Parsing resource IDs from a resource name</h2>
 <p>As well as the format methods, a static property is provided for each resource, of type
-<a href="../obj/api/Google.Api.Gax.PathTemplate.yml">PathTemplate</a>. This can be used to parse a resource name (as a string)
-into a <a href="../obj/api/Google.Api.Gax.ResourceName.yml">ResourceName</a> object. The resource IDs can then be extracted from
+<a href="api/Google.Api.Gax.PathTemplate.html">PathTemplate</a>. This can be used to parse a resource name (as a string)
+into a <a href="api/Google.Api.Gax.ResourceName.html">ResourceName</a> object. The resource IDs can then be extracted from
 that object either by index or by name. The names of the resource IDs match the names of the parameters in the corresponding
 <code>Format</code> methods.</p>
 <p>The <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> class has two template properties:</p>
@@ -157,9 +157,11 @@ string topicId = parsedName[&quot;topic&quot;];
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>
