@@ -46,7 +46,7 @@ namespace Google.Cloud.Speech.V1Beta1
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             using (var client = new HttpClient())
             {
-                var bytes = await client.GetByteArrayAsync(uri).ConfigureAwait(false);
+                var bytes = await client.GetByteArrayAsync(uri);
                 return FromBytes(bytes);
             }
         }
@@ -61,7 +61,7 @@ namespace Google.Cloud.Speech.V1Beta1
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             using (var client = new HttpClient())
             {
-                var bytes = await client.GetByteArrayAsync(uri).ConfigureAwait(false);
+                var bytes = await client.GetByteArrayAsync(uri);
                 return FromBytes(bytes);
             }
         }
