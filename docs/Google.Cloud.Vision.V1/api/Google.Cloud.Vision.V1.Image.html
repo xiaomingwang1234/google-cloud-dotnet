@@ -408,6 +408,489 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromBytes_System_Byte___" data-uid="Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[])">FromBytes(Byte[])</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> from the given byte array.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromBytes(byte[] bytes)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><em>bytes</em></td>
+                    <td><p>The bytes representing the raw image data.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_Image_FromBytes_System_Byte____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method copies the data from the byte array; modifications to <em>bytes</em>
+after this method returns will not be reflected in the image.</p>
+</div>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromBytes_System_Byte___System_Int32_System_Int32_" data-uid="Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[],System.Int32,System.Int32)">FromBytes(Byte[], Int32, Int32)</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> from a section of the given byte array.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromBytes(byte[] bytes, int offset, int count)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><em>bytes</em></td>
+                    <td><p>The bytes representing the raw image data.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>offset</em></td>
+                    <td><p>The offset into the byte array of the start of the data to include in the image.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>count</em></td>
+                    <td><p>The number of bytes to include in the image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_Image_FromBytes_System_Byte___System_Int32_System_Int32__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method copies the data from the byte array; modifications to <em>bytes</em>
+after this method returns will not be reflected in the image.</p>
+</div>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromFile_System_String_" data-uid="Google.Cloud.Vision.V1.Image.FromFile(System.String)">FromFile(String)</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by loading data from the given file path.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromFile(string path)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>path</em></td>
+                    <td><p>The file path to load image data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromFileAsync_System_String_" data-uid="Google.Cloud.Vision.V1.Image.FromFileAsync(System.String)">FromFileAsync(String)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by loading data from the given file path.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;Image&gt; FromFileAsync(string path)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>path</em></td>
+                    <td><p>The file path to load image data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a>&gt;</td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromStorageUri_System_String_" data-uid="Google.Cloud.Vision.V1.Image.FromStorageUri(System.String)">FromStorageUri(String)</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> with a <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_Source">Source</a> property referring to a Google Cloud
+Storage URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromStorageUri(string storageUri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>storageUri</em></td>
+                    <td><p>A Google Cloud Storage URI, of the form <code>gs://bucket-name/file-name</code>. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromStream_System_IO_Stream_" data-uid="Google.Cloud.Vision.V1.Image.FromStream(System.IO.Stream)">FromStream(Stream)</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by loading data from the given stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromStream(Stream stream)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>stream</em></td>
+                    <td><p>The stream to load image data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromStreamAsync_System_IO_Stream_" data-uid="Google.Cloud.Vision.V1.Image.FromStreamAsync(System.IO.Stream)">FromStreamAsync(Stream)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by loading data from the given stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;Image&gt; FromStreamAsync(Stream stream)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>stream</em></td>
+                    <td><p>The stream to load image data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a>&gt;</td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromUri_System_String_" data-uid="Google.Cloud.Vision.V1.Image.FromUri(System.String)">FromUri(String)</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromUri(string uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromUri_System_Uri_" data-uid="Google.Cloud.Vision.V1.Image.FromUri(System.Uri)">FromUri(Uri)</h4>
+              <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Image FromUri(Uri uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Uri</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
+                    <td><p>The newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromUriAsync_System_String_" data-uid="Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)">FromUriAsync(String)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;Image&gt; FromUriAsync(string uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result will be the newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Vision_V1_Image_FromUriAsync_System_Uri_" data-uid="Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)">FromUriAsync(Uri)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs an <a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;Image&gt; FromUriAsync(Uri uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Uri</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result will be the newly created image.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Cloud_Vision_V1_Image_GetHashCode" data-uid="Google.Cloud.Vision.V1.Image.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>

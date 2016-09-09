@@ -1883,28 +1883,33 @@ references, or <code>null</code> where the key was not found.</p>
               <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQuery(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given GQL query, returning a result set that can be viewed as a sequence of
-entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 GqlQuery gqlQuery = new GqlQuery
 {
-    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+    QueryString = &quot;SELECT * FROM book WHERE author = @author LIMIT @limit&quot;,
+    NamedBindings = {
+        { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } },
+        { &quot;limit&quot;, new GqlQueryParameter { Value = 10 } }
+    },
 };
 DatastoreQueryResults results = db.RunQuery(gqlQuery);
-// DatastoreQueryResults implements IEnumerable&lt;Entity&gt;, but you can
-// call AsEntityResults(), AsBatches() or AsResponses() to see the query
-// results in whatever way makes most sense for your application.
-foreach (Entity entity in results)
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
 {
     Console.WriteLine(entity);
 }
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual DatastoreQueryResults RunQuery(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual DatastoreQueryResults RunQuery(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1918,8 +1923,9 @@ foreach (Entity entity in results)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
-                    <td></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
@@ -1946,31 +1952,29 @@ foreach (Entity entity in results)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><p>The complete query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
-multiple times will execute the query again, potentially returning different results.</p>
-</div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQuery(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given structured query, returning a result set that can be viewed as a sequence of
-entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 Query query = new Query(&quot;book&quot;)
 {
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
+    Limit = 10
 };
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
 DatastoreQueryResults results = db.RunQuery(query);
-// DatastoreQueryResults implements IEnumerable&lt;Entity&gt;, but you can
-// call AsEntityResults(), AsBatches() or AsResponses() to see the query
-// results in whatever way makes most sense for your application.
-foreach (Entity entity in results)
+foreach (Entity entity in results.Entities)
 {
     Console.WriteLine(entity);
 }
@@ -2020,19 +2024,15 @@ foreach (Entity entity in results)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><p>The complete query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
-multiple times will execute the query again, potentially returning different results.</p>
-</div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given GQL query, returning a result set that can be viewed as an asynchronous
-sequence of entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
@@ -2041,18 +2041,19 @@ GqlQuery gqlQuery = new GqlQuery
     QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
     NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
 };
-DatastoreAsyncQueryResults results = db.RunQueryAsync(gqlQuery);
-// DatastoreAsyncQueryResults implements IAsyncEnumerable&lt;Entity&gt;, but you can
-// call AsEntityResults(), AsBatches() or AsResponses() to see the query
-// results in whatever way makes most sense for your application.
-await results.ForEachAsync(entity =&gt;
+DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
 {
     Console.WriteLine(entity);
-});
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual DatastoreAsyncQueryResults RunQueryAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreQueryResults&gt; RunQueryAsync(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2066,8 +2067,9 @@ await results.ForEachAsync(entity =&gt;
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
-                    <td></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
@@ -2093,20 +2095,16 @@ await results.ForEachAsync(entity =&gt;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
-multiple times will execute the query again, potentially returning different results.</p>
-</div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given structured query, returning a result set that can be viewed as an asynchronous
-sequence of entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
@@ -2114,18 +2112,19 @@ Query query = new Query(&quot;book&quot;)
 {
     Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
 };
-DatastoreAsyncQueryResults results = db.RunQueryAsync(query);
-// DatastoreAsyncQueryResults implements IAsyncEnumerable&lt;Entity&gt;, but you can
-// call AsEntityResults(), AsBatches() or AsResponses() to see the query
-// results in whatever way makes most sense for your application.
-await results.ForEachAsync(entity =&gt;
+DatastoreQueryResults results = await db.RunQueryAsync(query);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
 {
     Console.WriteLine(entity);
-});
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual DatastoreAsyncQueryResults RunQueryAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreQueryResults&gt; RunQueryAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2167,15 +2166,306 @@ await results.ForEachAsync(entity =&gt;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
+// LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResults() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+foreach (Entity entity in results)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+LazyDatastoreQuery results = db.RunQueryLazily(query);
+// LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResults() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+foreach (Entity entity in results)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual LazyDatastoreQuery RunQueryLazily(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
+// AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResultsAsync() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+await results.ForEachAsync(entity =&gt;
+{
+    Console.WriteLine(entity);
+});
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(query);
+// AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResultsAsync() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+await results.ForEachAsync(entity =&gt;
+{
+    Console.WriteLine(entity);
+});
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Update(Google.Datastore.V1Beta3.Entity,Google.Api.Gax.CallSettings)">Update(Entity, CallSettings)</h4>

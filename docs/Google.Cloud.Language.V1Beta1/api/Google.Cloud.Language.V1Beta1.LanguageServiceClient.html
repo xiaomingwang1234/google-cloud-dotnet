@@ -185,6 +185,71 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1Beta1_Document_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1Beta1.Document,Google.Api.Gax.CallSettings)">AnalyzeEntities(Document, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Analyzes the entities in the given document, specifying an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of
+UTF-16 for offsets.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">LanguageServiceClient client = LanguageServiceClient.Create();
+Document document = Document.FromPlainText(&quot;Richard of York gave battle in vain.&quot;);
+AnalyzeEntitiesResponse response = client.AnalyzeEntities(document);
+Console.WriteLine($&quot;Detected language: {response.Language}&quot;);
+Console.WriteLine(&quot;Detected entities:&quot;);
+foreach (Entity entity in response.Entities)
+{
+    Console.WriteLine($&quot;  {entity.Name} ({(int) (entity.Salience * 100)}%)&quot;);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AnalyzeEntitiesResponse AnalyzeEntities(Document document, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
+                    <td><em>document</em></td>
+                    <td><p>The document to analyze.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>The call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1Beta1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a></td>
+                    <td><p>The result of the entity analysis.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1Beta1_Document_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply calls <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_">AnalyzeEntities(Document, EncodingType, CallSettings)</a>,
+passing an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of UTF-16. This is the encoding used internally by
+.NET strings, so the offsets returned by the analysis will be suitable for use in calls
+such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
+</div>
               <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.EncodingType,Google.Api.Gax.CallSettings)">AnalyzeEntities(Document, EncodingType, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Finds named entities (currently finds proper names) in the text,
 entity types, salience, mentions for each entity, and other properties.</p>
@@ -240,6 +305,61 @@ entity types, salience, mentions for each entity, and other properties.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1Beta1_Document_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1Beta1.Document,Google.Api.Gax.CallSettings)">AnalyzeEntitiesAsync(Document, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Analyzes the entities in the given document asynchronously, specifying an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of
+UTF-16 for offsets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;AnalyzeEntitiesResponse&gt; AnalyzeEntitiesAsync(Document document, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
+                    <td><em>document</em></td>
+                    <td><p>The document to analyze.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>The call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1Beta1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1Beta1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the entity analysis response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1Beta1_Document_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply calls <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_">AnalyzeEntities(Document, EncodingType, CallSettings)</a>,
+passing an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of UTF-16. This is the encoding used internally by
+.NET strings, so the offsets returned by the analysis will be suitable for use in calls
+such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
+</div>
               <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.EncodingType,Google.Api.Gax.CallSettings)">AnalyzeEntitiesAsync(Document, EncodingType, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Finds named entities (currently finds proper names) in the text,
 entity types, salience, mentions for each entity, and other properties.</p>
@@ -350,10 +470,72 @@ entity types, salience, mentions for each entity, and other properties.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1Beta1_Document_System_Threading_CancellationToken_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1Beta1.Document,System.Threading.CancellationToken)">AnalyzeEntitiesAsync(Document, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Analyzes the entities in the given document asynchronously, specifying an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of
+UTF-16 for offsets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;AnalyzeEntitiesResponse&gt; AnalyzeEntitiesAsync(Document document, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
+                    <td><em>document</em></td>
+                    <td><p>The document to analyze.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1Beta1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1Beta1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the entity analysis response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1Beta1_Document_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply calls <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_">AnalyzeEntities(Document, EncodingType, CallSettings)</a>,
+passing an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of UTF-16. This is the encoding used internally by
+.NET strings, so the offsets returned by the analysis will be suitable for use in calls
+such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
+</div>
               <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnalyzeSentiment_Google_Cloud_Language_V1Beta1_Document_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnalyzeSentiment(Google.Cloud.Language.V1Beta1.Document,Google.Api.Gax.CallSettings)">AnalyzeSentiment(Document, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Analyzes the sentiment of the provided text.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">LanguageServiceClient client = LanguageServiceClient.Create();
+Document document = Document.FromPlainText(&quot;You&#39;re simply the best - better than all the rest.&quot;);
+AnalyzeSentimentResponse response = client.AnalyzeSentiment(document);
+Console.WriteLine($&quot;Detected language: {response.Language}&quot;);
+Console.WriteLine($&quot;Sentiment polarity: {response.DocumentSentiment.Polarity}&quot;);
+Console.WriteLine($&quot;Sentiment magnitude: {response.DocumentSentiment.Magnitude}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AnalyzeSentimentResponse AnalyzeSentiment(Document document, CallSettings callSettings = null)</code></pre>
@@ -497,6 +679,84 @@ entity types, salience, mentions for each entity, and other properties.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features,Google.Api.Gax.CallSettings)">AnnotateText(Document, AnnotateTextRequest.Types.Features, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Annotates the given document, specifying an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of
+UTF-16 for offsets.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">LanguageServiceClient client = LanguageServiceClient.Create();
+Document document = Document.FromPlainText(&quot;Richard of York gave battle in vain.&quot;);
+// &quot;Features&quot; selects which features you wish to enable. Here we want to extract syntax
+// and entities - you can also extract document sentiment.
+AnnotateTextResponse response = client.AnnotateText(document,
+    new Features { ExtractSyntax = true, ExtractEntities = true });
+Console.WriteLine($&quot;Detected language: {response.Language}&quot;);
+// The Sentences and Tokens properties provide all kinds of information
+// about the parsed text.
+Console.WriteLine($&quot;Number of sentences: {response.Sentences.Count}&quot;);
+Console.WriteLine($&quot;Number of tokens: {response.Tokens.Count}&quot;);
+Console.WriteLine(&quot;Detected entities:&quot;);
+foreach (Entity entity in response.Entities)
+{
+    Console.WriteLine($&quot;  {entity.Name} ({(int)(entity.Salience * 100)}%)&quot;);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AnnotateTextResponse AnnotateText(Document document, AnnotateTextRequest.Types.Features features, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
+                    <td><em>document</em></td>
+                    <td><p>The document to annotate.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features.html#Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features">AnnotateTextRequest.Types.Features</a></td>
+                    <td><em>features</em></td>
+                    <td><p>The analysis features to enable.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>The call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.AnnotateTextResponse.html#Google_Cloud_Language_V1Beta1_AnnotateTextResponse">AnnotateTextResponse</a></td>
+                    <td><p>The result of the text analysis.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply calls <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings_">AnnotateText(Document, AnnotateTextRequest.Types.Features, CallSettings)</a>,
+passing an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of UTF-16. This is the encoding used internally by
+.NET strings, so the offsets returned by the analysis will be suitable for use in calls
+such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
+</div>
               <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1Beta1.EncodingType,Google.Api.Gax.CallSettings)">AnnotateText(Document, AnnotateTextRequest.Types.Features, EncodingType, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Advanced API that analyzes the document and provides a full set of text
 annotations, including semantic, syntactic, and sentiment information. This
@@ -560,6 +820,67 @@ in-depth text features to build upon.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features,Google.Api.Gax.CallSettings)">AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Annotates the given document, specifying an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of
+UTF-16 for offsets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;AnnotateTextResponse&gt; AnnotateTextAsync(Document document, AnnotateTextRequest.Types.Features features, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
+                    <td><em>document</em></td>
+                    <td><p>The document to annotate.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features.html#Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features">AnnotateTextRequest.Types.Features</a></td>
+                    <td><em>features</em></td>
+                    <td><p>The analysis features to enable.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>The call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1Beta1.AnnotateTextResponse.html#Google_Cloud_Language_V1Beta1_AnnotateTextResponse">AnnotateTextResponse</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the text analysis response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply calls <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings_">AnnotateText(Document, AnnotateTextRequest.Types.Features, CallSettings)</a>,
+passing an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of UTF-16. This is the encoding used internally by
+.NET strings, so the offsets returned by the analysis will be suitable for use in calls
+such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
+</div>
               <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Cloud_Language_V1Beta1_EncodingType_Google_Api_Gax_CallSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1Beta1.EncodingType,Google.Api.Gax.CallSettings)">AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, EncodingType, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Advanced API that analyzes the document and provides a full set of text
 annotations, including semantic, syntactic, and sentiment information. This
@@ -686,6 +1007,67 @@ in-depth text features to build upon.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_System_Threading_CancellationToken_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1Beta1.Document,Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features,System.Threading.CancellationToken)">AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Annotates the given document, specifying an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of
+UTF-16 for offsets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;AnnotateTextResponse&gt; AnnotateTextAsync(Document document, AnnotateTextRequest.Types.Features features, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
+                    <td><em>document</em></td>
+                    <td><p>The document to annotate.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features.html#Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features">AnnotateTextRequest.Types.Features</a></td>
+                    <td><em>features</em></td>
+                    <td><p>The analysis features to enable.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1Beta1.AnnotateTextResponse.html#Google_Cloud_Language_V1Beta1_AnnotateTextResponse">AnnotateTextResponse</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the text analysis response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply calls <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1Beta1_Document_Google_Cloud_Language_V1Beta1_AnnotateTextRequest_Types_Features_Google_Api_Gax_CallSettings_">AnnotateText(Document, AnnotateTextRequest.Types.Features, CallSettings)</a>,
+passing an <a class="xref" href="Google.Cloud.Language.V1Beta1.EncodingType.html#Google_Cloud_Language_V1Beta1_EncodingType">EncodingType</a> of UTF-16. This is the encoding used internally by
+.NET strings, so the offsets returned by the analysis will be suitable for use in calls
+such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
+</div>
               <h4 id="Google_Cloud_Language_V1Beta1_LanguageServiceClient_Create_Channel_Google_Cloud_Language_V1Beta1_LanguageServiceSettings_" data-uid="Google.Cloud.Language.V1Beta1.LanguageServiceClient.Create(Channel,Google.Cloud.Language.V1Beta1.LanguageServiceSettings)">Create(Channel, LanguageServiceSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Language.V1Beta1.LanguageServiceClient.html#Google_Cloud_Language_V1Beta1_LanguageServiceClient">LanguageServiceClient</a> which uses the specified channel for remote operations.</p>
 </div>

@@ -83,6 +83,13 @@
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.ArrayValue.html#Google_Datastore_V1Beta3_ArrayValue">ArrayValue</a></h4>
                   <section><p> An array value.</p>
 </section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></h4>
+                  <section><p>A Datastore query which is executed lazily. Iterating over this object will provide a sequence
+of entities; alternatively, all the results can be fetched using <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery_GetAllResultsAsync">GetAllResultsAsync()</a>,
+or for diagnostic use cases the RPC responses can be viewed using <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery_AsResponses">AsResponses()</a>.
+The lazy evaluation is important: if you iterate over the query multiple times, it will execute
+multiple times, potentially returning different results each time.</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.BeginTransactionRequest.html#Google_Datastore_V1Beta3_BeginTransactionRequest">BeginTransactionRequest</a></h4>
                   <section><p> The request for [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
 </section>
@@ -118,9 +125,6 @@
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreClient.html#Google_Datastore_V1Beta3_Datastore_DatastoreClient">Datastore.DatastoreClient</a></h4>
                   <section><p>Client for Datastore</p>
 </section>
-                  <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></h4>
-                  <section><p>An asynchronous Datastore query which is executed lazily and which be viewed in multiple ways.</p>
-</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a></h4>
                   <section><p>Datastore client wrapper, for convenient use.</p>
 </section>
@@ -140,7 +144,9 @@ method to obtain an instance of this class.</p>
                   <section><p>Extension methods to assist with using <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a>.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></h4>
-                  <section><p>A Datastore query which is executed lazily and which be viewed in multiple ways.</p>
+                  <section><p>A complete set of query results, fetched and stored in memory. Results are
+fetched from a <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> or <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a>
+until the query-specified limit or end cursor is reached, or no more results are available.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreReflection.html#Google_Datastore_V1Beta3_DatastoreReflection">DatastoreReflection</a></h4>
                   <section><p>Holder for reflection information generated from google/datastore/v1beta3/datastore.proto</p>
@@ -209,6 +215,13 @@ or for root entities based on a partition ID.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.KindExpression.html#Google_Datastore_V1Beta3_KindExpression">KindExpression</a></h4>
                   <section><p> A representation of a kind.</p>
+</section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></h4>
+                  <section><p>A Datastore query which is executed lazily. Iterating over this object will provide a sequence
+of entities; alternatively, all the results can be fetched using <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery_GetAllResults">GetAllResults()</a>,
+or for diagnostic use cases the RPC responses can be viewed using <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery_AsResponses">AsResponses()</a>.
+The lazy evaluation is important: if you iterate over the query multiple times, it will execute
+multiple times, potentially returning different results each time.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.LookupRequest.html#Google_Datastore_V1Beta3_LookupRequest">LookupRequest</a></h4>
                   <section><p> The request for [google.datastore.v1beta3.Datastore.Lookup][google.datastore.v1beta3.Datastore.Lookup].</p>

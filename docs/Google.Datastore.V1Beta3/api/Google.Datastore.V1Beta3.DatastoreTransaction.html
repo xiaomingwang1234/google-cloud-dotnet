@@ -920,13 +920,14 @@ is still active, so a <code>using</code> statement is normally preferable to thi
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQuery(GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given GQL query in this transaction, returning a result set that can be viewed as a sequence of
-entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DatastoreQueryResults RunQuery(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public DatastoreQueryResults RunQuery(GqlQuery query, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -940,8 +941,9 @@ entities, entity results (with cursors), batches, or raw API responses.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
-                    <td></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
@@ -962,7 +964,7 @@ entities, entity results (with cursors), batches, or raw API responses.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><p>The complete query results.</p>
 </td>
                   </tr>
                 </tbody>
@@ -973,15 +975,11 @@ Using a transaction ensures that a commit operation will fail if any of the enti
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
 </p>
-<p>
-The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
-multiple times will execute the query again, potentially returning different results.
-</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQuery(Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given structured query in this transaction, returning a result set that can be viewed as a sequence of
-entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1023,7 +1021,7 @@ entities, entity results (with cursors), batches, or raw API responses.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><p>The complete query results.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1034,20 +1032,16 @@ Using a transaction ensures that a commit operation will fail if any of the enti
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
 </p>
-<p>
-The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
-multiple times will execute the query again, potentially returning different results.
-</p>
 </div>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)">RunQueryAsync(GqlQuery, PartitionId, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given GQL query in this transaction, returning a result set that can be viewed as an asynchronous
-sequence of entities, entity results (with cursors), batches, or raw API responses.</p>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQueryAsync(GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DatastoreAsyncQueryResults RunQueryAsync(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public Task&lt;DatastoreQueryResults&gt; RunQueryAsync(GqlQuery query, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1061,14 +1055,8 @@ sequence of entities, entity results (with cursors), batches, or raw API respons
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
-                    <td><p>The partition in which to execute the query. May be null, in which case
-the query is executed in the partition associated with the empty namespace in the project used by this transaction.</p>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -1089,32 +1077,28 @@ the query is executed in the partition associated with the empty namespace in th
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
 Using a transaction ensures that a commit operation will fail if any of the entities returned
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
 </p>
-<p>
-The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
-multiple times will execute the query again, potentially returning different results.
-</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQueryAsync(Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Executes the given structured query in this transaction, returning a result set that can be viewed as an asynchronous
-sequence of entities, entity results (with cursors), batches, or raw API responses.</p>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory
+and indicating whether more results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DatastoreAsyncQueryResults RunQueryAsync(Query query, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public Task&lt;DatastoreQueryResults&gt; RunQueryAsync(Query query, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1150,8 +1134,8 @@ sequence of entities, entity results (with cursors), batches, or raw API respons
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
-                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1162,9 +1146,242 @@ Using a transaction ensures that a commit operation will fail if any of the enti
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
 </p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQueryLazily(GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query in this transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
 <p>
 The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazily_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQueryLazily(Query, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazily_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQueryLazilyAsync(GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQueryLazilyAsync(Query, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>

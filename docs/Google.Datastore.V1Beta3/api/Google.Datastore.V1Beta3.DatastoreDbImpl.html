@@ -85,6 +85,18 @@
                   <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1Beta3_DatastoreClient_">DatastoreDb.Create(String, String, DatastoreClient)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateId_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings_">DatastoreDb.AllocateId(Key, CallSettings)</a>
                 </div>
                 <div>
@@ -886,12 +898,12 @@ for manually obtaining an instance, including automatic client creation.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override DatastoreQueryResults RunQuery(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -930,19 +942,19 @@ for manually obtaining an instance, including automatic client creation.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazily_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override DatastoreQueryResults RunQuery(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -981,19 +993,19 @@ for manually obtaining an instance, including automatic client creation.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override DatastoreAsyncQueryResults RunQueryAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1032,19 +1044,19 @@ for manually obtaining an instance, including automatic client creation.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override DatastoreAsyncQueryResults RunQueryAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1083,13 +1095,13 @@ for manually obtaining an instance, including automatic client creation.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <div><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">DatastoreDb.RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDbImpl_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDbImpl.Update(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>

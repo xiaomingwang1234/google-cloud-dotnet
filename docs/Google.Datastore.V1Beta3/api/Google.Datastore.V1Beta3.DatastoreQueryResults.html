@@ -70,7 +70,9 @@
               
               <h1 id="Google_Datastore_V1Beta3_DatastoreQueryResults" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults">Class DatastoreQueryResults
               </h1>
-              <div class="markdown level0 summary"><p>A Datastore query which is executed lazily and which be viewed in multiple ways.</p>
+              <div class="markdown level0 summary"><p>A complete set of query results, fetched and stored in memory. Results are
+fetched from a <a class="xref" href="Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery">LazyDatastoreQuery</a> or <a class="xref" href="Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a>
+until the query-specified limit or end cursor is reached, or no more results are available.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -106,57 +108,19 @@
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
               <h5 id="Google_Datastore_V1Beta3_DatastoreQueryResults_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class DatastoreQueryResults : IEnumerable&lt;Entity&gt;, IEnumerable</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class DatastoreQueryResults</code></pre>
               </div>
-              <h3 id="constructors">Constructors
+              <h3 id="properties">Properties
               </h3>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults__ctor_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_RunQueryResponse__" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.#ctor(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})">DatastoreQueryResults(IEnumerable&lt;RunQueryResponse&gt;)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new instance from the given sequence of responses. This constructor
-is only present to facilitate testing; application code will normally obtain instances
-of this class by calling <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_EndCursor" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.EndCursor">EndCursor</h4>
+              <div class="markdown level1 summary"><p>The cursor at the end of the results. This will never be null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DatastoreQueryResults(IEnumerable&lt;RunQueryResponse&gt; responses)</code></pre>
+                <pre><code class="lang-csharp hljs">public ByteString EndCursor { get; }</code></pre>
               </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><em>responses</em></td>
-                    <td><p>The responses to return.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreQueryResults__ctor_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_RunQueryResponse___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The sequence of responses will be returned directly from <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsResponses">AsResponses()</a>, and
-used to lazily construct the other sequences returned by this class. It should not
-contain any null references.</p>
-</div>
-              <h3 id="methods">Methods
-              </h3>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_AsBatches" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.AsBatches">AsBatches()</h4>
-              <div class="markdown level1 summary"><p>Returns the results of this query as a sequence of <a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.html#Google_Datastore_V1Beta3_QueryResultBatch">QueryResultBatch</a> values.
-This method is only useful if the application wishes to process a batch at a time; if the
-details of how the API splits the results into batches is not needed, use <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsEntityResults">AsEntityResults()</a>
-or simply iterate over the entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;QueryResultBatch&gt; AsBatches()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -166,99 +130,20 @@ or simply iterate over the entities.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.html#Google_Datastore_V1Beta3_QueryResultBatch">QueryResultBatch</a>&gt;</td>
-                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.html#Google_Datastore_V1Beta3_QueryResultBatch">QueryResultBatch</a> values.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_AsEntityResults" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.AsEntityResults">AsEntityResults()</h4>
-              <div class="markdown level1 summary"><p>Returns the results of this query as a sequence of <a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a> values.
-The final result from each batch is modified to use the batch&#39;s end cursor instead of
-the original <a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult_Cursor">Cursor</a> value.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;EntityResult&gt; AsEntityResults()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a>&gt;</td>
-                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a> values.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_AsResponses" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.AsResponses">AsResponses()</h4>
-              <div class="markdown level1 summary"><p>Returns the results of this query as a sequence of <a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a> values
-exactly as returned by the Datastore API. This method is only useful if the application
-wishes to examine the <a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse_Query">Query</a> property; otherwise, use</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsBatches">AsBatches()</a> to obtain the sequence of batches.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;RunQueryResponse&gt; AsResponses()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a> values.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_GetEnumerator" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.GetEnumerator">GetEnumerator()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerator&lt;Entity&gt; GetEnumerator()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Google.Datastore.V1Beta3.Entity&gt;.GetEnumerator()</span></div>
-              <h3 id="eii">Explicit Interface Implementations
-              </h3>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_Entities" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.Entities">Entities</h4>
+              <div class="markdown level1 summary"><p>The entities returned by the query.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Entity&gt; Entities { get; }</code></pre>
               </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -268,13 +153,36 @@ wishes to examine the <a class="xref" href="Google.Datastore.V1Beta3.RunQueryRes
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_MoreResults" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.MoreResults">MoreResults</h4>
+              <div class="markdown level1 summary"><p>The condition that caused the query to complete, indicating whether more
+results are available beyond the query limit or end cursor, or whether
+the data has been exhausted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public QueryResultBatch.Types.MoreResultsType MoreResults { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType.html#Google_Datastore_V1Beta3_QueryResultBatch_Types_MoreResultsType">QueryResultBatch.Types.MoreResultsType</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
             </article>
           </div>
           

@@ -61,6 +61,12 @@
               
 <p><code>Google.Datastore.V1Beta3</code> is a .NET client library for <a href="https://cloud.google.com/datastore/docs/concepts/overview">Google
 Cloud Datastore</a>.</p>
+<h1 id="please-update-to-googledatastorev1">Please update to Google.Datastore.V1</h1>
+<blockquote><p><strong>The Google.Datastore.V1Beta3 library has been superceded by
+<a href="../Google.Datastore.V1/index.html">Google.Datastore.V1</a>. No
+further changes will be performed on the V1Beta3 library; please
+update to V1.</strong></p>
+</blockquote>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Datastore.V1Beta3</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
@@ -112,7 +118,7 @@ Query query = new Query(&quot;message&quot;)
     Filter = Filter.GreaterThanOrEqual(&quot;created&quot;, cutoff),
     Order = { { &quot;created&quot;, Direction.Descending } }
 };
-foreach (Entity entity in db.RunQuery(query))
+foreach (Entity entity in db.RunQueryLazily(query))
 {
     DateTime created = (DateTime)entity[&quot;created&quot;];
     string text = (string)entity[&quot;text&quot;];

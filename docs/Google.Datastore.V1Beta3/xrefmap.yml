@@ -1428,6 +1428,38 @@ references:
   href: api/Google.Datastore.V1Beta3.ArrayValue.html#Google_Datastore_V1Beta3_ArrayValue_WriteTo_Google_Protobuf_CodedOutputStream_
   commentId: M:Google.Datastore.V1Beta3.ArrayValue.WriteTo(Google.Protobuf.CodedOutputStream)
   fullName: Google.Datastore.V1Beta3.ArrayValue.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery
+  name: AsyncLazyDatastoreQuery
+  href: api/Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery
+  commentId: T:Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery
+  fullName: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery
+- uid: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.#ctor(System.Collections.Generic.IAsyncEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
+  name: AsyncLazyDatastoreQuery(IAsyncEnumerable<RunQueryResponse>)
+  href: api/Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery__ctor_System_Collections_Generic_IAsyncEnumerable_Google_Datastore_V1Beta3_RunQueryResponse__
+  commentId: M:Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.#ctor(System.Collections.Generic.IAsyncEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
+  name.vb: AsyncLazyDatastoreQuery(IAsyncEnumerable(Of RunQueryResponse))
+  fullName: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsyncLazyDatastoreQuery(System.Collections.Generic.IAsyncEnumerable<Google.Datastore.V1Beta3.RunQueryResponse>)
+  fullName.vb: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsyncLazyDatastoreQuery(System.Collections.Generic.IAsyncEnumerable(Of Google.Datastore.V1Beta3.RunQueryResponse))
+- uid: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsBatches
+  name: AsBatches()
+  href: api/Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery_AsBatches
+  commentId: M:Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsBatches
+  fullName: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsBatches()
+- uid: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsResponses
+  name: AsResponses()
+  href: api/Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery_AsResponses
+  commentId: M:Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsResponses
+  fullName: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.AsResponses()
+- uid: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.GetAllResultsAsync
+  name: GetAllResultsAsync()
+  href: api/Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery_GetAllResultsAsync
+  commentId: M:Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.GetAllResultsAsync
+  fullName: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.GetAllResultsAsync()
+- uid: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.html#Google_Datastore_V1Beta3_AsyncLazyDatastoreQuery_GetEnumerator
+  commentId: M:Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.GetEnumerator
+  fullName: Google.Datastore.V1Beta3.AsyncLazyDatastoreQuery.GetEnumerator()
 - uid: Google.Datastore.V1Beta3.BeginTransactionRequest
   name: BeginTransactionRequest
   href: api/Google.Datastore.V1Beta3.BeginTransactionRequest.html#Google_Datastore_V1Beta3_BeginTransactionRequest
@@ -2207,38 +2239,6 @@ references:
   href: api/Google.Datastore.V1Beta3.Datastore.html#Google_Datastore_V1Beta3_Datastore_Descriptor
   commentId: P:Google.Datastore.V1Beta3.Datastore.Descriptor
   fullName: Google.Datastore.V1Beta3.Datastore.Descriptor
-- uid: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults
-  name: DatastoreAsyncQueryResults
-  href: api/Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults
-  commentId: T:Google.Datastore.V1Beta3.DatastoreAsyncQueryResults
-  fullName: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults
-- uid: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.#ctor(System.Collections.Generic.IAsyncEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
-  name: DatastoreAsyncQueryResults(IAsyncEnumerable<RunQueryResponse>)
-  href: api/Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults__ctor_System_Collections_Generic_IAsyncEnumerable_Google_Datastore_V1Beta3_RunQueryResponse__
-  commentId: M:Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.#ctor(System.Collections.Generic.IAsyncEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
-  name.vb: DatastoreAsyncQueryResults(IAsyncEnumerable(Of RunQueryResponse))
-  fullName: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.DatastoreAsyncQueryResults(System.Collections.Generic.IAsyncEnumerable<Google.Datastore.V1Beta3.RunQueryResponse>)
-  fullName.vb: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.DatastoreAsyncQueryResults(System.Collections.Generic.IAsyncEnumerable(Of Google.Datastore.V1Beta3.RunQueryResponse))
-- uid: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsBatches
-  name: AsBatches()
-  href: api/Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults_AsBatches
-  commentId: M:Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsBatches
-  fullName: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsBatches()
-- uid: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsEntityResults
-  name: AsEntityResults()
-  href: api/Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults_AsEntityResults
-  commentId: M:Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsEntityResults
-  fullName: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsEntityResults()
-- uid: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsResponses
-  name: AsResponses()
-  href: api/Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults_AsResponses
-  commentId: M:Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsResponses
-  fullName: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.AsResponses()
-- uid: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.GetEnumerator
-  name: GetEnumerator()
-  href: api/Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults_GetEnumerator
-  commentId: M:Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.GetEnumerator
-  fullName: Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.GetEnumerator()
 - uid: Google.Datastore.V1Beta3.DatastoreClient
   name: DatastoreClient
   href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient
@@ -2821,6 +2821,34 @@ references:
   name.vb: RunQueryAsync(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
   fullName: Google.Datastore.V1Beta3.DatastoreDb.RunQueryAsync(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
   fullName.vb: Google.Datastore.V1Beta3.DatastoreDb.RunQueryAsync(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazily(GqlQuery, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazily(GqlQuery, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazily(Query, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazily_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazily(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazily(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazilyAsync(GqlQuery, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazilyAsync(GqlQuery, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazilyAsync(Query, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazilyAsync(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
 - uid: Google.Datastore.V1Beta3.DatastoreDb.Update(Google.Datastore.V1Beta3.Entity,Google.Api.Gax.CallSettings)
   name: Update(Entity, CallSettings)
   href: api/Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings_
@@ -3007,34 +3035,34 @@ references:
   href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_ProjectId
   commentId: P:Google.Datastore.V1Beta3.DatastoreDbImpl.ProjectId
   fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.ProjectId
-- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name: RunQuery(GqlQuery, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
-  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
-  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name.vb: RunQuery(GqlQuery, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
-  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.GqlQuery, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
-  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.GqlQuery, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
-- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name: RunQuery(Query, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
-  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
-  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name.vb: RunQuery(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
-  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
-  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQuery(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
-- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name: RunQueryAsync(GqlQuery, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
-  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
-  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name.vb: RunQueryAsync(GqlQuery, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
-  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
-  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
-- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name: RunQueryAsync(Query, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
-  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
-  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
-  name.vb: RunQueryAsync(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
-  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
-  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryAsync(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazily(GqlQuery, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazily(GqlQuery, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazily(Query, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazily_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazily(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazily(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazilyAsync(GqlQuery, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazilyAsync(GqlQuery, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name: RunQueryLazilyAsync(Query, Nullable<ReadOptions.Types.ReadConsistency>, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency},Google.Api.Gax.CallSettings)
+  name.vb: RunQueryLazilyAsync(Query, Nullable(Of ReadOptions.Types.ReadConsistency), CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query, System.Nullable<Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Datastore.V1Beta3.DatastoreDbImpl.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query, System.Nullable(Of Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency), Google.Api.Gax.CallSettings)
 - uid: Google.Datastore.V1Beta3.DatastoreDbImpl.Update(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)
   name: Update(IEnumerable<Entity>, CallSettings)
   href: api/Google.Datastore.V1Beta3.DatastoreDbImpl.html#Google_Datastore_V1Beta3_DatastoreDbImpl_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_
@@ -3078,39 +3106,21 @@ references:
   href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults
   commentId: T:Google.Datastore.V1Beta3.DatastoreQueryResults
   fullName: Google.Datastore.V1Beta3.DatastoreQueryResults
-- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.#ctor(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
-  name: DatastoreQueryResults(IEnumerable<RunQueryResponse>)
-  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults__ctor_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_RunQueryResponse__
-  commentId: M:Google.Datastore.V1Beta3.DatastoreQueryResults.#ctor(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
-  name.vb: DatastoreQueryResults(IEnumerable(Of RunQueryResponse))
-  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.DatastoreQueryResults(System.Collections.Generic.IEnumerable<Google.Datastore.V1Beta3.RunQueryResponse>)
-  fullName.vb: Google.Datastore.V1Beta3.DatastoreQueryResults.DatastoreQueryResults(System.Collections.Generic.IEnumerable(Of Google.Datastore.V1Beta3.RunQueryResponse))
-- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.AsBatches
-  name: AsBatches()
-  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsBatches
-  commentId: M:Google.Datastore.V1Beta3.DatastoreQueryResults.AsBatches
-  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.AsBatches()
-- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.AsEntityResults
-  name: AsEntityResults()
-  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsEntityResults
-  commentId: M:Google.Datastore.V1Beta3.DatastoreQueryResults.AsEntityResults
-  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.AsEntityResults()
-- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.AsResponses
-  name: AsResponses()
-  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsResponses
-  commentId: M:Google.Datastore.V1Beta3.DatastoreQueryResults.AsResponses
-  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.AsResponses()
-- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.GetEnumerator
-  name: GetEnumerator()
-  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_GetEnumerator
-  commentId: M:Google.Datastore.V1Beta3.DatastoreQueryResults.GetEnumerator
-  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.GetEnumerator()
-- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Google.Datastore.V1Beta3.DatastoreQueryResults.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.EndCursor
+  name: EndCursor
+  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_EndCursor
+  commentId: P:Google.Datastore.V1Beta3.DatastoreQueryResults.EndCursor
+  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.EndCursor
+- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.Entities
+  name: Entities
+  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_Entities
+  commentId: P:Google.Datastore.V1Beta3.DatastoreQueryResults.Entities
+  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.Entities
+- uid: Google.Datastore.V1Beta3.DatastoreQueryResults.MoreResults
+  name: MoreResults
+  href: api/Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_MoreResults
+  commentId: P:Google.Datastore.V1Beta3.DatastoreQueryResults.MoreResults
+  fullName: Google.Datastore.V1Beta3.DatastoreQueryResults.MoreResults
 - uid: Google.Datastore.V1Beta3.DatastoreReflection
   name: DatastoreReflection
   href: api/Google.Datastore.V1Beta3.DatastoreReflection.html#Google_Datastore_V1Beta3_DatastoreReflection
@@ -3311,16 +3321,36 @@ references:
   href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_
   commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
   fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.Query, Google.Api.Gax.CallSettings)
-- uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)
-  name: RunQueryAsync(GqlQuery, PartitionId, CallSettings)
-  href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings_
-  commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)
-  fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery, Google.Datastore.V1Beta3.PartitionId, Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)
+  name: RunQueryAsync(GqlQuery, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery, Google.Api.Gax.CallSettings)
 - uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
   name: RunQueryAsync(Query, CallSettings)
   href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_
   commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
   fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.Query, Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)
+  name: RunQueryLazily(GqlQuery, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazily_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.GqlQuery, Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
+  name: RunQueryLazily(Query, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazily_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazily(Google.Datastore.V1Beta3.Query, Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)
+  name: RunQueryLazilyAsync(GqlQuery, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazilyAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.GqlQuery, Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
+  name: RunQueryLazilyAsync(Query, CallSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryLazilyAsync_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)
+  fullName: Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryLazilyAsync(Google.Datastore.V1Beta3.Query, Google.Api.Gax.CallSettings)
 - uid: Google.Datastore.V1Beta3.DatastoreTransaction.TransactionId
   name: TransactionId
   href: api/Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_TransactionId
@@ -4446,6 +4476,39 @@ references:
   href: api/Google.Datastore.V1Beta3.KindExpression.html#Google_Datastore_V1Beta3_KindExpression_WriteTo_Google_Protobuf_CodedOutputStream_
   commentId: M:Google.Datastore.V1Beta3.KindExpression.WriteTo(Google.Protobuf.CodedOutputStream)
   fullName: Google.Datastore.V1Beta3.KindExpression.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Datastore.V1Beta3.LazyDatastoreQuery
+  name: LazyDatastoreQuery
+  href: api/Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery
+  commentId: T:Google.Datastore.V1Beta3.LazyDatastoreQuery
+  fullName: Google.Datastore.V1Beta3.LazyDatastoreQuery
+- uid: Google.Datastore.V1Beta3.LazyDatastoreQuery.#ctor(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
+  name: LazyDatastoreQuery(IEnumerable<RunQueryResponse>)
+  href: api/Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery__ctor_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_RunQueryResponse__
+  commentId: M:Google.Datastore.V1Beta3.LazyDatastoreQuery.#ctor(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})
+  name.vb: LazyDatastoreQuery(IEnumerable(Of RunQueryResponse))
+  fullName: Google.Datastore.V1Beta3.LazyDatastoreQuery.LazyDatastoreQuery(System.Collections.Generic.IEnumerable<Google.Datastore.V1Beta3.RunQueryResponse>)
+  fullName.vb: Google.Datastore.V1Beta3.LazyDatastoreQuery.LazyDatastoreQuery(System.Collections.Generic.IEnumerable(Of Google.Datastore.V1Beta3.RunQueryResponse))
+- uid: Google.Datastore.V1Beta3.LazyDatastoreQuery.AsResponses
+  name: AsResponses()
+  href: api/Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery_AsResponses
+  commentId: M:Google.Datastore.V1Beta3.LazyDatastoreQuery.AsResponses
+  fullName: Google.Datastore.V1Beta3.LazyDatastoreQuery.AsResponses()
+- uid: Google.Datastore.V1Beta3.LazyDatastoreQuery.GetAllResults
+  name: GetAllResults()
+  href: api/Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery_GetAllResults
+  commentId: M:Google.Datastore.V1Beta3.LazyDatastoreQuery.GetAllResults
+  fullName: Google.Datastore.V1Beta3.LazyDatastoreQuery.GetAllResults()
+- uid: Google.Datastore.V1Beta3.LazyDatastoreQuery.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery_GetEnumerator
+  commentId: M:Google.Datastore.V1Beta3.LazyDatastoreQuery.GetEnumerator
+  fullName: Google.Datastore.V1Beta3.LazyDatastoreQuery.GetEnumerator()
+- uid: Google.Datastore.V1Beta3.LazyDatastoreQuery.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Datastore.V1Beta3.LazyDatastoreQuery.html#Google_Datastore_V1Beta3_LazyDatastoreQuery_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Datastore.V1Beta3.LazyDatastoreQuery.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Datastore.V1Beta3.LazyDatastoreQuery.System.Collections.IEnumerable.GetEnumerator()
 - uid: Google.Datastore.V1Beta3.LookupRequest
   name: LookupRequest
   href: api/Google.Datastore.V1Beta3.LookupRequest.html#Google_Datastore_V1Beta3_LookupRequest

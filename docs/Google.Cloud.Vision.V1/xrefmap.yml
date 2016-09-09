@@ -1155,6 +1155,52 @@ references:
   href: api/Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_WriteTo_Google_Protobuf_CodedOutputStream_
   commentId: M:Google.Cloud.Vision.V1.AnnotateImageResponse.WriteTo(Google.Protobuf.CodedOutputStream)
   fullName: Google.Cloud.Vision.V1.AnnotateImageResponse.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1
+  name: AnnotationResult<T>
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1
+  commentId: T:Google.Cloud.Vision.V1.AnnotationResult`1
+  name.vb: AnnotationResult(Of T)
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T)
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1.#ctor(Google.Rpc.Status,Google.Protobuf.Collections.RepeatedField{`0})
+  name: AnnotationResult(Status, RepeatedField<T>)
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1__ctor_Google_Rpc_Status_Google_Protobuf_Collections_RepeatedField__0__
+  commentId: M:Google.Cloud.Vision.V1.AnnotationResult`1.#ctor(Google.Rpc.Status,Google.Protobuf.Collections.RepeatedField{`0})
+  name.vb: AnnotationResult(Status, RepeatedField(Of T))
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>.AnnotationResult(Google.Rpc.Status, Google.Protobuf.Collections.RepeatedField<T>)
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T).AnnotationResult(Google.Rpc.Status, Google.Protobuf.Collections.RepeatedField(Of T))
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1.Count
+  name: Count
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1_Count
+  commentId: P:Google.Cloud.Vision.V1.AnnotationResult`1.Count
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>.Count
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T).Count
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1.Error
+  name: Error
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1_Error
+  commentId: P:Google.Cloud.Vision.V1.AnnotationResult`1.Error
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>.Error
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T).Error
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1_GetEnumerator
+  commentId: M:Google.Cloud.Vision.V1.AnnotationResult`1.GetEnumerator
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>.GetEnumerator()
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T).GetEnumerator()
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1_Item_System_Int32_
+  commentId: P:Google.Cloud.Vision.V1.AnnotationResult`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>.Item[System.Int32]
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T).Item(System.Int32)
+- uid: Google.Cloud.Vision.V1.AnnotationResult`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Cloud.Vision.V1.AnnotationResult-1.html#Google_Cloud_Vision_V1_AnnotationResult_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Cloud.Vision.V1.AnnotationResult`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Cloud.Vision.V1.AnnotationResult<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Google.Cloud.Vision.V1.AnnotationResult(Of T).System.Collections.IEnumerable.GetEnumerator()
 - uid: Google.Cloud.Vision.V1.BatchAnnotateImagesRequest
   name: BatchAnnotateImagesRequest
   href: api/Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest
@@ -2498,6 +2544,65 @@ references:
   href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_Equals_System_Object_
   commentId: M:Google.Cloud.Vision.V1.Image.Equals(System.Object)
   fullName: Google.Cloud.Vision.V1.Image.Equals(System.Object)
+- uid: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[])
+  name: FromBytes(Byte[])
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromBytes_System_Byte___
+  commentId: M:Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[])
+  name.vb: FromBytes(Byte())
+  fullName: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[])
+  fullName.vb: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte())
+- uid: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[],System.Int32,System.Int32)
+  name: FromBytes(Byte[], Int32, Int32)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromBytes_System_Byte___System_Int32_System_Int32_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[],System.Int32,System.Int32)
+  name.vb: FromBytes(Byte(), Int32, Int32)
+  fullName: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[], System.Int32, System.Int32)
+  fullName.vb: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte(), System.Int32, System.Int32)
+- uid: Google.Cloud.Vision.V1.Image.FromFile(System.String)
+  name: FromFile(String)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromFile_System_String_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromFile(System.String)
+  fullName: Google.Cloud.Vision.V1.Image.FromFile(System.String)
+- uid: Google.Cloud.Vision.V1.Image.FromFileAsync(System.String)
+  name: FromFileAsync(String)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromFileAsync_System_String_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromFileAsync(System.String)
+  fullName: Google.Cloud.Vision.V1.Image.FromFileAsync(System.String)
+- uid: Google.Cloud.Vision.V1.Image.FromStorageUri(System.String)
+  name: FromStorageUri(String)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromStorageUri_System_String_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromStorageUri(System.String)
+  fullName: Google.Cloud.Vision.V1.Image.FromStorageUri(System.String)
+- uid: Google.Cloud.Vision.V1.Image.FromStream(System.IO.Stream)
+  name: FromStream(Stream)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromStream_System_IO_Stream_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromStream(System.IO.Stream)
+  fullName: Google.Cloud.Vision.V1.Image.FromStream(System.IO.Stream)
+- uid: Google.Cloud.Vision.V1.Image.FromStreamAsync(System.IO.Stream)
+  name: FromStreamAsync(Stream)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromStreamAsync_System_IO_Stream_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromStreamAsync(System.IO.Stream)
+  fullName: Google.Cloud.Vision.V1.Image.FromStreamAsync(System.IO.Stream)
+- uid: Google.Cloud.Vision.V1.Image.FromUri(System.String)
+  name: FromUri(String)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUri_System_String_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromUri(System.String)
+  fullName: Google.Cloud.Vision.V1.Image.FromUri(System.String)
+- uid: Google.Cloud.Vision.V1.Image.FromUri(System.Uri)
+  name: FromUri(Uri)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUri_System_Uri_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromUri(System.Uri)
+  fullName: Google.Cloud.Vision.V1.Image.FromUri(System.Uri)
+- uid: Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)
+  name: FromUriAsync(String)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUriAsync_System_String_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)
+  fullName: Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)
+- uid: Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
+  name: FromUriAsync(Uri)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUriAsync_System_Uri_
+  commentId: M:Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
+  fullName: Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
 - uid: Google.Cloud.Vision.V1.Image.GetHashCode
   name: GetHashCode()
   href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_GetHashCode
@@ -2629,6 +2734,21 @@ references:
   href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient
   commentId: T:Google.Cloud.Vision.V1.ImageAnnotatorClient
   fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.Annotate(Google.Cloud.Vision.V1.AnnotateImageRequest,Google.Api.Gax.CallSettings)
+  name: Annotate(AnnotateImageRequest, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_Annotate_Google_Cloud_Vision_V1_AnnotateImageRequest_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.Annotate(Google.Cloud.Vision.V1.AnnotateImageRequest,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.Annotate(Google.Cloud.Vision.V1.AnnotateImageRequest, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.AnnotateAsync(Google.Cloud.Vision.V1.AnnotateImageRequest,Google.Api.Gax.CallSettings)
+  name: AnnotateAsync(AnnotateImageRequest, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_AnnotateAsync_Google_Cloud_Vision_V1_AnnotateImageRequest_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.AnnotateAsync(Google.Cloud.Vision.V1.AnnotateImageRequest,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.AnnotateAsync(Google.Cloud.Vision.V1.AnnotateImageRequest, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.AnnotateAsync(Google.Cloud.Vision.V1.AnnotateImageRequest,System.Threading.CancellationToken)
+  name: AnnotateAsync(AnnotateImageRequest, CancellationToken)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_AnnotateAsync_Google_Cloud_Vision_V1_AnnotateImageRequest_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.AnnotateAsync(Google.Cloud.Vision.V1.AnnotateImageRequest,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.AnnotateAsync(Google.Cloud.Vision.V1.AnnotateImageRequest, System.Threading.CancellationToken)
 - uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},Google.Api.Gax.CallSettings)
   name: BatchAnnotateImages(IEnumerable<AnnotateImageRequest>, CallSettings)
   href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_
@@ -2675,6 +2795,76 @@ references:
   href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DefaultScopes
   commentId: P:Google.Cloud.Vision.V1.ImageAnnotatorClient.DefaultScopes
   fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DefaultScopes
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFaces(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectFaces(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectFaces_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFaces(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFaces(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFacesAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectFacesAsync(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectFacesAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFacesAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFacesAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImageProperties(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  name: DetectImageProperties(Image, ImageContext, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectImageProperties_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImageProperties(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImageProperties(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImagePropertiesAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  name: DetectImagePropertiesAsync(Image, ImageContext, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectImagePropertiesAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImagePropertiesAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImagePropertiesAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabels(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectLabels(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLabels_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabels(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabels(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabelsAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectLabelsAsync(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLabelsAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabelsAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabelsAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarks(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectLandmarks(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLandmarks_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarks(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarks(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarksAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectLandmarksAsync(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLandmarksAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarksAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarksAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogos(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectLogos(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLogos_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogos(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogos(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogosAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectLogosAsync(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLogosAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogosAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogosAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearch(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  name: DetectSafeSearch(Image, ImageContext, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearch_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearch(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearch(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearchAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  name: DetectSafeSearchAsync(Image, ImageContext, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearchAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearchAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearchAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectText(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectText(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectText(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectText(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
+- uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectTextAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  name: DetectTextAsync(Image, ImageContext, Int32, CallSettings)
+  href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_CallSettings_
+  commentId: M:Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectTextAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.CallSettings)
+  fullName: Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectTextAsync(Google.Cloud.Vision.V1.Image, Google.Cloud.Vision.V1.ImageContext, System.Int32, Google.Api.Gax.CallSettings)
 - uid: Google.Cloud.Vision.V1.ImageAnnotatorClient.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_GrpcClient
