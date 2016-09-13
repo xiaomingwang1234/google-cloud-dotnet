@@ -81,22 +81,7 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
                   <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
                 </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
@@ -384,41 +369,6 @@ foreach (BigqueryResult.Row row in result.Rows)
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_ToString" data-uid="Google.Bigquery.V2.BigqueryTable.ToString">ToString()</h4>
-              <div class="markdown level1 summary"><p>Returns the fully qualified ID of the table in square brackets.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <h5 id="Google_Bigquery_V2_BigqueryTable_ToString_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p><p>
-This is designed to facilitate constructing queries by simply
-including the table in the string.
-</p></p>
-<example>
-<pre><code>var table = client.GetTable(datasetId, tableId);
-var query = $"SELECT name, age from {table}";</code></pre>
-</example>
-</div>
               <h4 id="Google_Bigquery_V2_BigqueryTable_UploadCsv_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to this table.
 This method just creates a <see cref="!:TableReference"></see> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>

@@ -1073,11 +1073,6 @@ references:
   href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Schema
   commentId: P:Google.Bigquery.V2.BigqueryTable.Schema
   fullName: Google.Bigquery.V2.BigqueryTable.Schema
-- uid: Google.Bigquery.V2.BigqueryTable.ToString
-  name: ToString()
-  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_ToString
-  commentId: M:Google.Bigquery.V2.BigqueryTable.ToString
-  fullName: Google.Bigquery.V2.BigqueryTable.ToString()
 - uid: Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
   name: UploadCsv(Stream, UploadCsvOptions)
   href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_UploadCsv_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
