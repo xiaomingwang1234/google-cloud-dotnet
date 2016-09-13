@@ -286,6 +286,16 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Google.Api.Gax.Rest.PagedEnumerable<TRequest, TResponse, TResource>.System.Collections.IEnumerable.GetEnumerator()
   fullName.vb: Google.Api.Gax.Rest.PagedEnumerable(Of TRequest, TResponse, TResource).System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Api.Gax.Rest.UserAgentHelper
+  name: UserAgentHelper
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper
+  commentId: T:Google.Api.Gax.Rest.UserAgentHelper
+  fullName: Google.Api.Gax.Rest.UserAgentHelper
+- uid: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
+  name: GetDefaultUserAgent(Type)
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_System_Type_
+  commentId: M:Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
+  fullName: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
 - uid: Google.Bigquery.V2
   name: Google.Bigquery.V2
   href: api/Google.Bigquery.V2.html#Google_Bigquery_V2

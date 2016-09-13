@@ -158,7 +158,7 @@ until the query-specified limit or end cursor is reached, or no more results are
                   <section><p>
 Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__">Insert(IEnumerable&lt;Entity&gt;)</a>,
 <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__">Delete(IEnumerable&lt;Key&gt;)</a>, <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__">Update(IEnumerable&lt;Entity&gt;)</a> and <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__">Upsert(IEnumerable&lt;Entity&gt;)</a>)
-merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Commit_Google_Api_Gax_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_CommitAsync_Google_Api_Gax_CallSettings_">CommitAsync(CallSettings)</a>
+merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Commit_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_CommitAsync_CallSettings_">CommitAsync(CallSettings)</a>
 operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
 API operations.
 </p>
@@ -167,7 +167,7 @@ Even though transactions aren&#39;t inherently related to a specific partition I
 a transaction are likely to be in a single partition, specified in a <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> used to create the transaction.
 </p>
 <p>
-Disposing of a transaction calls <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Rollback_Google_Api_Gax_CallSettings_">Rollback(CallSettings)</a> if the transaction has not already been committed
+Disposing of a transaction calls <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction_Rollback_CallSettings_">Rollback(CallSettings)</a> if the transaction has not already been committed
 or rolled back.
 </p>
 </section>

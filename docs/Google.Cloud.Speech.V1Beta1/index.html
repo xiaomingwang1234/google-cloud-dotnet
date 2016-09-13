@@ -104,8 +104,8 @@ using (Stream stream = OpenAudioStream()) // Any regular .NET stream
 }
 </code></pre><h2 id="detect-speech-in-a-single-file">Detect speech in a single file</h2>
 <pre><code class="lang-cs">SpeechClient client = SpeechClient.Create();
-var config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
-var response = client.SyncRecognize(config, audio);
+RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
+SyncRecognizeResponse response = client.SyncRecognize(config, audio);
 Console.WriteLine(response);
 </code></pre><h1 id="synchronous-asynchronous-and-streaming-operations">Synchronous, asynchronous and streaming operations</h1>
 <p>The underlying RPC API contains three modes of operation.</p>

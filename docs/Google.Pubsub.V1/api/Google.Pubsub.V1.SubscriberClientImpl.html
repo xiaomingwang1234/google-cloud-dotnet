@@ -105,10 +105,10 @@
                   <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_">SubscriberClient.FormatTopicName(String, String)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.CreateAsync(ServiceEndpoint, SubscriberSettings)</a>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.CreateAsync(ServiceEndpoint, SubscriberSettings)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.Create(ServiceEndpoint, SubscriberSettings)</a>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.Create(ServiceEndpoint, SubscriberSettings)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Channel_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.Create(Channel, SubscriberSettings)</a>
@@ -224,7 +224,7 @@
               <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GrpcClient">SubscriberClient.GrpcClient</a></div>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Acknowledge(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.CallSettings)">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Acknowledge(System.String,System.Collections.Generic.IEnumerable{System.String},CallSettings)">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Acknowledges the messages associated with the <code>ack_ids</code> in the
 <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
 from the subscription.</p>
@@ -261,7 +261,7 @@ by the Pub/Sub system in the <code>Pull</code> response. Must not be empty.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -269,8 +269,8 @@ by the Pub/Sub system in the <code>Pull</code> response. Must not be empty.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">SubscriberClient.Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.AcknowledgeAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.CallSettings)">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">SubscriberClient.Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.AcknowledgeAsync(System.String,System.Collections.Generic.IEnumerable{System.String},CallSettings)">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Acknowledges the messages associated with the <code>ack_ids</code> in the
 <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
 from the subscription.</p>
@@ -307,7 +307,7 @@ by the Pub/Sub system in the <code>Pull</code> response. Must not be empty.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -331,8 +331,8 @@ by the Pub/Sub system in the <code>Pull</code> response. Must not be empty.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">SubscriberClient.AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscription(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">SubscriberClient.AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscription(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,CallSettings)">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
 If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -401,7 +401,7 @@ system will eventually redeliver the message.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -425,8 +425,8 @@ system will eventually redeliver the message.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_">SubscriberClient.CreateSubscription(String, String, PushConfig, Int32, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscriptionAsync(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">SubscriberClient.CreateSubscription(String, String, PushConfig, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscriptionAsync(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,CallSettings)">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
 If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -495,7 +495,7 @@ system will eventually redeliver the message.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -519,8 +519,8 @@ system will eventually redeliver the message.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_">SubscriberClient.CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscription_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscription(System.String,Google.Api.Gax.CallSettings)">DeleteSubscription(String, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">SubscriberClient.CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscription_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscription(System.String,CallSettings)">DeleteSubscription(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
 are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
@@ -549,7 +549,7 @@ subscription, or its topic unless the same topic is specified.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -557,8 +557,8 @@ subscription, or its topic unless the same topic is specified.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscription_System_String_Google_Api_Gax_CallSettings_">SubscriberClient.DeleteSubscription(String, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscriptionAsync(System.String,Google.Api.Gax.CallSettings)">DeleteSubscriptionAsync(String, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscription_System_String_CallSettings_">SubscriberClient.DeleteSubscription(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscriptionAsync_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscriptionAsync(System.String,CallSettings)">DeleteSubscriptionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
 are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
@@ -587,7 +587,7 @@ subscription, or its topic unless the same topic is specified.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -611,8 +611,8 @@ subscription, or its topic unless the same topic is specified.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_">SubscriberClient.DeleteSubscriptionAsync(String, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscription_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscription(System.String,Google.Api.Gax.CallSettings)">GetSubscription(String, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_CallSettings_">SubscriberClient.DeleteSubscriptionAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscription_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscription(System.String,CallSettings)">GetSubscription(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -637,7 +637,7 @@ subscription, or its topic unless the same topic is specified.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -661,8 +661,8 @@ subscription, or its topic unless the same topic is specified.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscription_System_String_Google_Api_Gax_CallSettings_">SubscriberClient.GetSubscription(String, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscriptionAsync(System.String,Google.Api.Gax.CallSettings)">GetSubscriptionAsync(String, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscription_System_String_CallSettings_">SubscriberClient.GetSubscription(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscriptionAsync_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscriptionAsync(System.String,CallSettings)">GetSubscriptionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -687,7 +687,7 @@ subscription, or its topic unless the same topic is specified.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -711,8 +711,8 @@ subscription, or its topic unless the same topic is specified.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_">SubscriberClient.GetSubscriptionAsync(String, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptions(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_CallSettings_">SubscriberClient.GetSubscriptionAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptions(System.String,System.String,System.Nullable{System.Int32},CallSettings)">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -752,7 +752,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -769,15 +769,15 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsResponse.html#Google_Pubsub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
+                    <td><span class="xref">IPagedEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsResponse.html#Google_Pubsub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
                     <td><p>A pageable sequence of Subscription resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">SubscriberClient.ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptionsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__CallSettings_">SubscriberClient.ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptionsAsync(System.String,System.String,System.Nullable{System.Int32},CallSettings)">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -817,7 +817,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -834,15 +834,15 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsResponse.html#Google_Pubsub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
+                    <td><span class="xref">IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsResponse.html#Google_Pubsub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
                     <td><p>A pageable asynchronous sequence of Subscription resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">SubscriberClient.ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyAckDeadline(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,Google.Api.Gax.CallSettings)">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__CallSettings_">SubscriberClient.ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyAckDeadline(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,CallSettings)">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Modifies the ack deadline for a specific message. This method is useful
 to indicate that more time is needed to process a message by the
 subscriber, or to make the message available for redelivery if the
@@ -886,7 +886,7 @@ another pull request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -894,8 +894,8 @@ another pull request.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">SubscriberClient.ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyAckDeadlineAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,Google.Api.Gax.CallSettings)">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">SubscriberClient.ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyAckDeadlineAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,CallSettings)">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Modifies the ack deadline for a specific message. This method is useful
 to indicate that more time is needed to process a message by the
 subscriber, or to make the message available for redelivery if the
@@ -939,7 +939,7 @@ another pull request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -963,8 +963,8 @@ another pull request.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">SubscriberClient.ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyPushConfig(System.String,Google.Pubsub.V1.PushConfig,Google.Api.Gax.CallSettings)">ModifyPushConfig(String, PushConfig, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">SubscriberClient.ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyPushConfig(System.String,Google.Pubsub.V1.PushConfig,CallSettings)">ModifyPushConfig(String, PushConfig, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Modifies the <code>PushConfig</code> for a specified subscription.</p>
 <p>This may be used to change a push subscription to a pull one (signified by
 an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
@@ -1003,7 +1003,7 @@ the subscription if <code>Pull</code> is not called.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1011,8 +1011,8 @@ the subscription if <code>Pull</code> is not called.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_Google_Api_Gax_CallSettings_">SubscriberClient.ModifyPushConfig(String, PushConfig, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyPushConfigAsync(System.String,Google.Pubsub.V1.PushConfig,Google.Api.Gax.CallSettings)">ModifyPushConfigAsync(String, PushConfig, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">SubscriberClient.ModifyPushConfig(String, PushConfig, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyPushConfigAsync(System.String,Google.Pubsub.V1.PushConfig,CallSettings)">ModifyPushConfigAsync(String, PushConfig, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Modifies the <code>PushConfig</code> for a specified subscription.</p>
 <p>This may be used to change a push subscription to a pull one (signified by
 an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
@@ -1051,7 +1051,7 @@ the subscription if <code>Pull</code> is not called.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1075,8 +1075,8 @@ the subscription if <code>Pull</code> is not called.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_Google_Api_Gax_CallSettings_">SubscriberClient.ModifyPushConfigAsync(String, PushConfig, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Pull_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Pull(System.String,System.Boolean,System.Int32,Google.Api.Gax.CallSettings)">Pull(String, Boolean, Int32, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">SubscriberClient.ModifyPushConfigAsync(String, PushConfig, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Pull_System_String_System_Boolean_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Pull(System.String,System.Boolean,System.Int32,CallSettings)">Pull(String, Boolean, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
 messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
@@ -1121,7 +1121,7 @@ system may return fewer than the number specified.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1145,8 +1145,8 @@ system may return fewer than the number specified.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Pull_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_">SubscriberClient.Pull(String, Boolean, Int32, CallSettings)</a></div>
-              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_PullAsync_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.PullAsync(System.String,System.Boolean,System.Int32,Google.Api.Gax.CallSettings)">PullAsync(String, Boolean, Int32, CallSettings)</h4>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Pull_System_String_System_Boolean_System_Int32_CallSettings_">SubscriberClient.Pull(String, Boolean, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_PullAsync_System_String_System_Boolean_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.PullAsync(System.String,System.Boolean,System.Int32,CallSettings)">PullAsync(String, Boolean, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
 messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
@@ -1191,7 +1191,7 @@ system may return fewer than the number specified.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1215,7 +1215,7 @@ system may return fewer than the number specified.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_">SubscriberClient.PullAsync(String, Boolean, Int32, CallSettings)</a></div>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_CallSettings_">SubscriberClient.PullAsync(String, Boolean, Int32, CallSettings)</a></div>
             </article>
           </div>
           
