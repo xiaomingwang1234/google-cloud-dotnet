@@ -80,10 +80,10 @@ namespace Google.Cloud.Storage.V1
         /// Regular expression to be used for bucket validation when <see cref="ValidateBucket"/>
         /// would throw the wrong exception.
         /// </summary>
-        private static readonly Regex ValidBucketName = new Regex(@"^[0-9a-z.\-_]{1,222}$");
+        private static readonly Regex ValidBucketName = new Regex(@"^[0-9a-z.\-_]{3,222}$");
 
         /// <summary>
-        /// Validates that a bucket only contains valid characters, and is not too long. This is far from
+        /// Validates that a bucket only contains valid characters, and is not too short or long. This is far from
         /// complete validation, but is all that's required to ensure that it's safe to include in a URL.
         /// This method also checks for nullity, so callers don't need to do that first.
         /// This method is internal rather than private for testing purposes.
@@ -102,7 +102,7 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <param name="bucket">Bucket to validate</param>
         /// <param name="paramName">The parameter name in the calling method</param>
-        private void ValidateBucket(Bucket bucket, string paramName)
+        private static void ValidateBucket(Bucket bucket, string paramName)
         {
             GaxPreconditions.CheckNotNull(bucket, paramName);
             GaxPreconditions.CheckArgument(bucket.Name != null, paramName, "Bucket must have a name");
@@ -116,16 +116,20 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <param name="obj">Object to validate</param>
         /// <param name="paramName">The parameter name in the calling method</param>
-        private void ValidateObject(Object obj, string paramName)
+        private static void ValidateObject(Object obj, string paramName)
         {
-            GaxPreconditions.CheckNotNull(obj, paramName);
-            GaxPreconditions.CheckArgument(
-                obj.Name != null && obj.Bucket != null,
+            GaxRestPreconditions.CheckNotNull(obj, paramName);
+            GaxRestPreconditions.CheckArgument(
+                obj.Name != null && obj.Bucket != null && obj.Name != "" && obj.Bucket != "",
                 paramName,
-                "Object must have a name and bucket");
-            GaxPreconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
+                "Object must have a non-empty name and bucket");
+            GaxRestPreconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
                 paramName,
                 "Object bucket '{0}' is invalid", obj.Bucket);
+        }
+
+        internal static void ValidateObjectName(string objectName, string paramName)
+        {
         }
     }
 }
